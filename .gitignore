@@ -1,0 +1,14 @@
+# Operator-side scratch — do not commit
+*.json
+!cve-*/EXPECTED-DETECTION.md
+*.tmp
+*.log
+.DS_Store
+__pycache__/
+
+# Anything under poc/ is intentionally excluded.
+# Per the repo's no-exploit-in-tree policy, real PoCs live with their
+# original authors. SOURCES.md links to them. If someone forks this
+# repo and adds a poc/ folder locally, .gitignore prevents accidental
+# pushes.
+**/poc/
