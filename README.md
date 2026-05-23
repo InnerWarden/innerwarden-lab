@@ -24,7 +24,7 @@ If you reproduce a CVE and the detection differs from what's documented, [open a
 | CVE | Class | Status |
 |-----|-------|--------|
 | [CVE-2026-31431 , Copy Fail](cve-2026-31431-copy-fail/README.md) | `algif_aead` → page cache write → LPE | ✓ Recipe + reproduction |
-| CVE-2026-43284 , Dirty Frag (ESP) | esp4/esp6 → page cache write → LPE | _planned_ |
+| [CVE-2026-43284 , Dirty Frag (ESP)](cve-2026-43284-dirty-frag/README.md) | esp4/esp6 → page cache write → LPE | ✓ Recipe + reproduction (caught by same detector as Copy Fail, no code change) |
 | CVE-2026-43500 , Dirty Frag (RxRPC) | RxRPC → page cache write → LPE | _planned_ |
 | CVE-2026-46300 , Fragnesia | XFRM ESP-in-TCP → page cache write → LPE | _planned_ |
 
