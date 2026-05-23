@@ -26,7 +26,7 @@ If you reproduce a CVE and the detection differs from what's documented, [open a
 | [CVE-2026-31431 , Copy Fail](cve-2026-31431-copy-fail/README.md) | `algif_aead` → page cache write → LPE | ✓ Recipe + reproduction |
 | [CVE-2026-43284 , Dirty Frag (ESP)](cve-2026-43284-dirty-frag/README.md) | esp4/esp6 → page cache write → LPE | ✓ Recipe + reproduction (caught by same detector as Copy Fail, no code change) |
 | [CVE-2026-43500 , Dirty Frag (RxRPC)](cve-2026-43500-rxrpc/README.md) | rxrpc → page cache write of `/etc/passwd` → LPE | ✓ Recipe + reproduction (caught by a *different* detector , defense-in-depth in action) |
-| CVE-2026-46300 , Fragnesia | XFRM ESP-in-TCP → page cache write → LPE | _planned_ |
+| [CVE-2026-46300 , Fragnesia](cve-2026-46300-fragnesia/README.md) | XFRM ESP-in-TCP → page cache write → LPE | ✓ Recipe + reproduction (caught by same detector as Copy Fail; closes the 2026 family) |
 
 All four belong to the 2026 page-cache LPE family. They use different kernel subsystems for ingress but share the same primitive (foreign-owned scatterlist written into a setuid binary's page cache).
 
